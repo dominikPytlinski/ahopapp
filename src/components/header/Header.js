@@ -21,6 +21,10 @@ class Header extends React.Component {
                         <div>0</div>
                     </div>
                 </nav>
+                <div className="banner">
+                    <span>Comphy Ferniture</span>
+                    <button>Start shopping</button>
+                </div>
             </header>
         );
     }

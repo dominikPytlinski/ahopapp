@@ -60,3 +60,43 @@
     padding: 0 2px;
     color: #fff;
 }
+
+.header .banner {
+    position: absolute;
+    top: 30vh;
+    left: 50%;
+    width: 50%;
+    background-color: rgba(255, 255, 255, .7);
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.header .banner span {
+    color: var(--warning-color);
+    padding: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.header .banner button {
+    background-color: var(--warning-color);
+    outline: none;
+    color: #fff;
+    padding: 1rem;
+    border: 1px solid var(--warning-color);
+    border-radius: 5px;
+    text-transform: uppercase;
+    width: 60%;
+    margin: 1rem auto 0 auto;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header .banner button:hover {
+    color: var(--warning-color);
+    background-color: transparent;
+}
