@@ -1,0 +1,62 @@
+:root {
+    --danger-color: #ff4444;
+    --dangerr-color-dark: #CC0000;
+    --warning-color: #ffbb33;
+    --warning-color-dark: #FF8800;
+    --success-color: #00C851;
+    --success-color-dark: #007E33;
+    --info-color: #33b5e5;
+    --info-color-dark: #0099CC;
+    --default-color: #2BBBAD;
+    --default-color-dark: #00695c;
+    --primary-color: #4285F4;
+    --primary-color-dark: #0d47a1;
+    --secondary-color: #aa66cc;
+    --secondary-color-dark: #9933CC;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: url('../../assets/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header nav {
+    width: 100%;
+    height: 60px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+
+.header nav div:first-child {
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.header nav div:last-child {
+    margin-right: 5%;
+    position: relative;
+    cursor: pointer;
+}
+
+.header nav div:nth-child(2) span {
+    font-size: 1.5rem;
+}
+
+.header nav div:last-child div {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--warning-color);
+    font-size: .8rem;
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #fff;
+}
