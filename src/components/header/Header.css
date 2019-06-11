@@ -80,6 +80,7 @@
     font-weight: bold;
     text-align: center;
     font-size: 2rem;
+    text-transform: capitalize;
 }
 
 .header .banner button {
@@ -90,7 +91,7 @@
     border: 1px solid var(--warning-color);
     border-radius: 5px;
     text-transform: uppercase;
-    width: 60%;
+    width: 100%;
     margin: 1rem auto 0 auto;
     font-weight: bold;
     cursor: pointer;

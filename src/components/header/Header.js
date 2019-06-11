@@ -16,7 +16,7 @@ class Header extends React.Component {
                     <div>
                         <span>Comphy Ferniture</span>
                     </div>
-                    <div>
+                    <div onClick={this.props.showCart}>
                         <span><FontAwesomeIcon icon="shopping-cart" /></span>
                         <div>0</div>
                     </div>
