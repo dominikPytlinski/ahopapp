@@ -5,6 +5,14 @@ import './Header.css';
 
 class Header extends React.Component {
 
+    startShopping = () => {
+        window.scrollBy({
+            top: window.innerHeight,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+    
     render()
     {
         return(
@@ -23,7 +31,7 @@ class Header extends React.Component {
                 </nav>
                 <div className="banner">
                     <span>Comphy Ferniture</span>
-                    <button>Start shopping</button>
+                    <button onClick={this.startShopping}>Start shopping</button>
                 </div>
             </header>
         );
