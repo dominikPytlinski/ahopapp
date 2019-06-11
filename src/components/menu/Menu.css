@@ -1,0 +1,54 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ccc;
+    width: 70%;
+    height: 100vh;
+    z-index: 3;
+    transform: translateX(-100%);
+    transition: all .3s linear;
+}
+
+.menu .menu-header {
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu .menu-header span {
+    display: block;
+    font-size: 1.5rem;
+    height: 60px;
+    width: 10%;
+    line-height: 250%;
+    cursor: pointer;
+    margin-right: 3%;
+    text-align: right;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem;
+}
+
+.menu ul li svg {
+    flex-grow: 1;
+}
+
+.menu ul li span {
+    flex-grow: 2;
+}
+
+.visible {
+    transform: translateX(0);
+}

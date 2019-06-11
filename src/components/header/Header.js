@@ -10,7 +10,7 @@ class Header extends React.Component {
         return(
             <header className="header">
                 <nav>
-                    <div>
+                    <div onClick={this.props.showMenu}>
                         <span><FontAwesomeIcon icon="bars" /></span>
                     </div>
                     <div>
