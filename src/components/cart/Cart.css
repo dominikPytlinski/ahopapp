@@ -4,7 +4,7 @@
     right: 0;
     background-color: #ccc;
     width: 70%;
-    height: 100vh;
+    height: 200vh;
     z-index: 3;
     transform: translateX(100%);
     transition: all .3s linear;
@@ -25,6 +25,11 @@
     cursor: pointer;
     margin-right: 3%;
     text-align: right;
+}
+
+.cart .cart-content {
+    overflow-y: scroll;
+    max-height: calc(100vh - 60px);
 }
 
 .cart .cart-body .cart-item {
