@@ -19,7 +19,7 @@ class App extends React.Component {
       isCartVisible: false,
       isMenuVisible: false,
       isCurtainVisible: false,
-      isLoggedIn: true
+      isLoggedIn: false
     }
   }
   

@@ -68,9 +68,9 @@ class Cart extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="cart-footer">
-                    <span>Total: $10</span>
+                    <div className="cart-footer">
+                        <span>Total: $10</span>
+                    </div>
                 </div>
             </div>
         );
