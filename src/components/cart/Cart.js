@@ -30,6 +30,60 @@ class Cart extends React.Component {
                             <span><FontAwesomeIcon icon="chevron-down" /></span>
                         </div>
                     </div>
+                    <div className="cart-item">
+                        <img src="img/sofa.jpg" alt="product"/>
+                        <span>$10</span>
+                        <div className="cart-item-counter">
+                            <span><FontAwesomeIcon icon="chevron-up" /></span>
+                            <span>1</span>
+                            <span><FontAwesomeIcon icon="chevron-down" /></span>
+                        </div>
+                    </div>
+                    <div className="cart-item">
+                        <img src="img/sofa.jpg" alt="product"/>
+                        <span>$10</span>
+                        <div className="cart-item-counter">
+                            <span><FontAwesomeIcon icon="chevron-up" /></span>
+                            <span>1</span>
+                            <span><FontAwesomeIcon icon="chevron-down" /></span>
+                        </div>
+                    </div>
+                    <div className="cart-item">
+                        <img src="img/sofa.jpg" alt="product"/>
+                        <span>$10</span>
+                        <div className="cart-item-counter">
+                            <span><FontAwesomeIcon icon="chevron-up" /></span>
+                            <span>1</span>
+                            <span><FontAwesomeIcon icon="chevron-down" /></span>
+                        </div>
+                    </div>
+                    <div className="cart-item">
+                        <img src="img/sofa.jpg" alt="product"/>
+                        <span>$10</span>
+                        <div className="cart-item-counter">
+                            <span><FontAwesomeIcon icon="chevron-up" /></span>
+                            <span>1</span>
+                            <span><FontAwesomeIcon icon="chevron-down" /></span>
+                        </div>
+                    </div>
+                    <div className="cart-item">
+                        <img src="img/sofa.jpg" alt="product"/>
+                        <span>$10</span>
+                        <div className="cart-item-counter">
+                            <span><FontAwesomeIcon icon="chevron-up" /></span>
+                            <span>1</span>
+                            <span><FontAwesomeIcon icon="chevron-down" /></span>
+                        </div>
+                    </div>
+                    <div className="cart-item">
+                        <img src="img/sofa.jpg" alt="product"/>
+                        <span>$10</span>
+                        <div className="cart-item-counter">
+                            <span><FontAwesomeIcon icon="chevron-up" /></span>
+                            <span>1</span>
+                            <span><FontAwesomeIcon icon="chevron-down" /></span>
+                        </div>
+                    </div>
                 </div>
                 <div className="cart-footer">
                     <span>Total: $10</span>

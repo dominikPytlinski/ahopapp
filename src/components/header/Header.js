@@ -7,7 +7,7 @@ class Header extends React.Component {
 
     startShopping = () => {
         window.scrollBy({
-            top: window.innerHeight,
+            top: window.innerHeight - 60,
             left: 0,
             behavior: 'smooth'
         });
