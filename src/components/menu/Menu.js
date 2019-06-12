@@ -1,19 +1,20 @@
 import React from 'react';
-import './Menu.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import MenuItem from '../menuItem/MenuItem';
+import './Menu.css';
 
 class Menu extends React.Component {
-
+    
     render()
     {
+        const { loggedIn } = this.props;
+        
         return(
             <div className={this.props.v ? 'menu visible' : 'menu'}>
                 <div className="menu-header">
                     <span onClick={this.props.closeMenu}><FontAwesomeIcon icon="times" /></span>
                 </div>
-                <ul>
-                    <li><FontAwesomeIcon icon="user" /><span>Zaloguj się</span></li>
-                </ul>
+                <MenuItem loggedIn={loggedIn}/>
             </div>
         );
     }

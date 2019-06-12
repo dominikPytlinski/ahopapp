@@ -27,6 +27,11 @@
     text-align: right;
 }
 
+.cart .cart-content {
+    overflow-y: scroll;
+    max-height: calc(100vh - 60px);
+}
+
 .cart .cart-body .cart-item {
     display: flex;
     justify-content: space-evenly;
