@@ -9,7 +9,7 @@ const MenuItem = (props) => {
         return(
             <ul>
                 <li><Link to="add-product" className="link"><FontAwesomeIcon icon="plus-square" /><span>Dodaj produkt</span></Link></li>
-                <li><Link to="logout" className="link"><FontAwesomeIcon icon="user" /><span>Wyloguj się</span></Link></li>
+                <li className="link" onClick={props.logOut}><FontAwesomeIcon icon="user" /><span>Wyloguj się</span></li>
             </ul>
         );
     } else {

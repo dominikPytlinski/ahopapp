@@ -5,6 +5,10 @@ import './Menu.css';
 
 class Menu extends React.Component {
     
+    logOut = () => {
+        
+    }
+    
     render()
     {
         const { loggedIn } = this.props;
@@ -14,7 +18,7 @@ class Menu extends React.Component {
                 <div className="menu-header">
                     <span onClick={this.props.closeMenu}><FontAwesomeIcon icon="times" /></span>
                 </div>
-                <MenuItem loggedIn={loggedIn}/>
+                <MenuItem loggedIn={loggedIn} logOut={this.logOut}/>
             </div>
         );
     }
