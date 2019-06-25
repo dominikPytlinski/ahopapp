@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import { getFromSessionStorage } from './modules/Services';
+import { getFromStorage } from './modules/Services';
 import './AddProduct.css';
 
 class AddProduct extends React.Component {
@@ -18,7 +18,7 @@ class AddProduct extends React.Component {
 
     componentWillMount()
     {
-        this.setState({isLogged: (getFromSessionStorage('jwt')) ? true : false});
+        this.setState({isLogged: (getFromStorage('jwt', 'session')) ? true : false});
     }
 
     setDescription = (e) => {

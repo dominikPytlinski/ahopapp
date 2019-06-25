@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import { ajax, setToSessionStorage } from './modules/Services';
+import { ajax, setToStorage } from './modules/Services';
 import './Login.css';
 
 class Login extends React.Component {
@@ -34,7 +34,7 @@ class Login extends React.Component {
 
         ajax(url, 'POST', formData)
             .then((res) => {
-                setToSessionStorage('jwt', res.jwt);
+                (res.jwt) ? setToStorage('jwt', res.jwt, 'session') : console.log(res.message);
                 this.setState({
                     isRedirect: true
                 });

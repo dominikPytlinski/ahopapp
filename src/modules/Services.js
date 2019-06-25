@@ -9,26 +9,15 @@ export const ajax = async (url, method, data = null) => {
     return result;
 }
 
-export const setToStorage = (key, data) => {
-    localStorage.setItem(key, JSON.stringify(data));
+export const setToStorage = (key, data, storage) => {
+    (storage === 'session') ? sessionStorage.setItem(key, JSON.stringify(data)) : localStorage.setItem(key, JSON.stringify(data));
 }
 
-export const getFromStorage = (key) => {
-    return (JSON.parse(localStorage.getItem(key))) ? JSON.parse(localStorage.getItem(key)) : false;
+export const getFromStorage = (key, storage) => {
+    let data = (storage === 'session') ? sessionStorage.getItem(key) : localStorage.getItem(key);
+    return (data) ? JSON.parse(data) : false;
 }
 
-export const removeFromStorage = (key) => {
-    localStorage.removeItem(key);
-}
-
-export const setToSessionStorage = (key, data) => {
-    sessionStorage.setItem(key, JSON.stringify(data));
-}
-
-export const getFromSessionStorage = (key) => {
-    return (JSON.parse(sessionStorage.getItem(key))) ? JSON.parse(sessionStorage.getItem(key)) : false;
-}
-
-export const removeFromSessionStorage = (key) => {
-    sessionStorage.removeItem(key);
+export const removeFromStorage = (key, storage) => {
+    (storage === 'session') ? sessionStorage.removeItem(key) : localStorage.removeItem(key);
 }

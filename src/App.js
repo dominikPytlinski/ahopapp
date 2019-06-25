@@ -6,7 +6,7 @@ import Content from './components/content/Content';
 import Cart from './components/cart/Cart';
 import Menu from './components/menu/Menu';
 import Curtain from './components/curtain/Curtain';
-import { getFromSessionStorage, removeFromSessionStorage } from './modules/Services';
+import { getFromStorage, removeFromStorage } from './modules/Services';
 import './App.css';
 
 library.add(faBars, faShoppingCart, faTimes, faChevronUp, faChevronDown, faUser, faPlusSquare);
@@ -20,8 +20,8 @@ class App extends React.Component {
       isCartVisible: false,
       isMenuVisible: false,
       isCurtainVisible: false,
-      isLoggedIn: (getFromSessionStorage('jwt')) ? true : false,
-      jwt: (getFromSessionStorage('jwt')) ? getFromSessionStorage('jwt') : false
+      isLoggedIn: (getFromStorage('jwt', 'session')) ? true : false,
+      jwt: (getFromStorage('jwt', 'session')) ? getFromStorage('jwt', 'session') : false
     }
   }
   
@@ -45,7 +45,7 @@ class App extends React.Component {
   }
 
   logOut = () => {
-    removeFromSessionStorage('jwt');
+    removeFromStorage('jwt', 'session');
     this.setState({
       isMenuVisible: false,
       isCurtainVisible: false,
