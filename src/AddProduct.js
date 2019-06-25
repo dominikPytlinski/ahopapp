@@ -9,11 +9,16 @@ class AddProduct extends React.Component {
     {
         super(props);
         this.state = {
-            isLogged: (getFromSessionStorage('jwt')) ? true : false,
+            isLogged: false,
             description: '',
             price: '',
             data: ''
         }
+    }
+
+    componentWillMount()
+    {
+        this.setState({isLogged: (getFromSessionStorage('jwt')) ? true : false});
     }
 
     setDescription = (e) => {
