@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import { ajax, setToSessionStorage } from './modules/Services';
 import './Login.css';
 
 class Login extends React.Component {
@@ -10,7 +11,7 @@ class Login extends React.Component {
         this.state = {
             login: '',
             pass: '',
-            rd: false
+            isRedirect: false,
         }
     }
 
@@ -22,14 +23,27 @@ class Login extends React.Component {
         this.setState({pass: e.target.value});
     }
 
-    login = (e) => {
+    login = async (e) => {
         e.preventDefault();
-        this.setState({rd: true})
+
+        let formData = new FormData();
+        let url = 'http://localhost/shopapi/user/login';
+
+        formData.append('login', this.state.login);
+        formData.append('password', this.state.pass);
+
+        ajax(url, 'POST', formData)
+            .then((res) => {
+                setToSessionStorage('jwt', res.jwt);
+                this.setState({
+                    isRedirect: true
+                });
+            }).catch(err => console.log(err));
     }
     
     render()
     {
-        const { login, pass, rd } = this.state;
+        const { login, pass, isRedirect } = this.state;
         return(
             <div className="login">
                 <header>
@@ -42,7 +56,7 @@ class Login extends React.Component {
                         <input type="submit" value="Zaloguj" />
                     </form>
                 </div>
-                {(rd === true) ? <Redirect to="/" /> : null}
+                {(isRedirect === true) ? <Redirect to="/" /> : null}
             </div>
         );
     }

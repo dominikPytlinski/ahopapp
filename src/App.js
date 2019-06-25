@@ -6,6 +6,7 @@ import Content from './components/content/Content';
 import Cart from './components/cart/Cart';
 import Menu from './components/menu/Menu';
 import Curtain from './components/curtain/Curtain';
+import { getFromSessionStorage, removeFromSessionStorage } from './modules/Services';
 import './App.css';
 
 library.add(faBars, faShoppingCart, faTimes, faChevronUp, faChevronDown, faUser, faPlusSquare);
@@ -19,7 +20,8 @@ class App extends React.Component {
       isCartVisible: false,
       isMenuVisible: false,
       isCurtainVisible: false,
-      isLoggedIn: false
+      isLoggedIn: (getFromSessionStorage('jwt')) ? true : false,
+      jwt: (getFromSessionStorage('jwt')) ? getFromSessionStorage('jwt') : false
     }
   }
   
@@ -41,6 +43,16 @@ class App extends React.Component {
     this.setState({ isMenuVisible: !isMenuVisible });
     this.showCurtain();
   }
+
+  logOut = () => {
+    removeFromSessionStorage('jwt');
+    this.setState({
+      isMenuVisible: false,
+      isCurtainVisible: false,
+      isLoggedIn: false,
+      jwt: false
+    });
+  }
   
   render()
   {
@@ -49,7 +61,7 @@ class App extends React.Component {
         <Header showCart={this.showCart} showMenu={this.showMenu}/>
         <Content />
         <Cart v={this.state.isCartVisible} closeCart={this.showCart}/>
-        <Menu v={this.state.isMenuVisible} loggedIn={this.state.isLoggedIn} closeMenu={this.showMenu}/>
+        <Menu v={this.state.isMenuVisible} loggedIn={this.state.isLoggedIn} closeMenu={this.showMenu} logOut={this.logOut} />
         <Curtain v={this.state.isCurtainVisible}/>
       </div>
     );
